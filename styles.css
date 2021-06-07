@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(169, 169, 169, 0.315);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.three__card--container {
+    display: grid;
+    grid-template-areas: "sed suv lux";
+    max-width: 1200px;
+    border-bottom-left-radius: 30px;
+    margin: 200px 50px;
+    grid-gap: 40px;
+
+}
+
+.sedans__container {
+    grid-area: "sed";
+    background: rgb(179, 123, 19);
+    padding: 30px 40px;
+    box-shadow: 0px 5px 20px 5px #000000;
+}
+
+.title {
+    font-size: calc(1.9vw + 1.9vh);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: bisque;
+    margin: 20px 0;
+}
+
+
+.sedans__container:hover {
+    transform: translateY(20px);
+    transition: 0.2s ease-in-out;
+}
+
+
+.suv__container {
+    grid-area: "suv";
+    background: rgb(48, 143, 122);
+    padding: 30px 40px;
+    box-shadow: 0px 5px 20px 5px #000000;
+
+
+}
+
+.suv__container:hover {
+    transform: translateY(20px);
+    transition: 0.2s ease-in-out;
+}
+
+
+
+.luxury__container {
+    grid-area: "lux";
+    background: rgb(68, 153, 68);
+    padding: 30px 40px;
+    box-shadow: 0px 5px 20px 5px #000000;
+
+}
+
+.luxury__container:hover {
+    transform: translateY(20px);
+    transition: 0.2s ease-in-out;
+}
+
+.description {
+    font-size: calc(.8vw + .8vh);
+    font-family: 'Noto Sans JP', sans-serif;
+    color: bisque;
+    margin-bottom: 60px;
+    line-height: 1.8;
+}
+
+.btn {
+
+    padding: 15px 30px;
+    border: 3px solid white;
+    border-radius: 50px;
+    font-size: calc(.7vw + .7vh);
+    background: none;
+    color: bisque;
+    letter-spacing: 2px;
+
+}
+
+.btn:hover {
+    border: 3px solid rgb(14, 14, 26);
+    transition: 0.4s ease-in-out;
+    color: rgb(1, 1, 2);
+    cursor: pointer;
+
+
+}
+
+.fas::before {
+    font-size: 50px;
+}
+
+
+@media (max-width:800px) {
+    .three__card--container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "sed"
+            "suv"
+            "lux";
+        max-width: 1400px;
+        border-bottom-left-radius: 30px;
+        margin: 100px 40px;
+        ;
+        grid-gap: 40px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+
+}
